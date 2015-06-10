@@ -1,0 +1,22 @@
+{
+  "name": "facebookapp",
+  "version": "1.00",
+  "homepage": "https://github.com/megcunningham/facebookapp",
+  "authors": [
+    "Meg Cunningham <meg_cunningham@live.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+    "dependencies": {
+    "angular": "~1.4.0",
+    "bootstrap": "~3.3.4",
+    "angular-route": "~1.4.0",
+    "firebase": "~2.2.6"
+  }
+}
