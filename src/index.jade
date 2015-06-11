@@ -1,0 +1,36 @@
+doctype html
+html(lang="en-US", ng-app="facebook-app")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title Angular Facebook
+    link(rel="stylesheet", href="lib/build.css")
+    link(rel="stylesheet", href="lib/main.css")
+  body
+    .container
+      nav
+        ul
+          li: a(href="/#/") Home
+          li: a(href="/#/findFriends") Find Friends
+          li: a(href="/#/myFriends") My Friends
+          li: a(href="/#/createProfile") Create Profile
+
+          h3.newProfile New Profile
+          form(ng-controller="CreateProfile as profile")
+            .form-group
+              label.control-label First Name
+              input.form-control(type="text", placeholder="John", ng-model="profile.people.firstname")
+            .form-group
+              label.control-label Last Name
+              input.form-control(type="text", placeholder="Doe", ng-model="profile.people.lastname")
+            .form-group
+              label.control-label City
+              input.form-control(type="text", placeholder="Nashville", ng-model="profile.people.city") 
+            .form-group
+              label.control-label Email
+              input.form-control(type="text", placeholder="abc@email.com", ng-model="profile.people.email")
+              button.btn(ng-click="profile.saveAddress()") Save
+
+    script(src="lib/build.js")
+    script(src="js/main.js")
