@@ -6,40 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Angular Facebook</title>
     <link rel="stylesheet" href="lib/build.css">
-    <link rel="stylesheet" href="lib/main.css">
   </head>
   <body>
     <div class="container">
       <nav>
         <ul>
-          <li><a href="/#/">Home</a></li>
+          <li><a href="/#/">Wall</a></li>
           <li><a href="/#/findFriends">Find Friends</a></li>
           <li><a href="/#/myFriends">My Friends</a></li>
-          <li><a href="/#/createProfile">Create Profile</a></li>
-          <h3 class="newProfile">New Profile</h3>
-          <form ng-controller="CreateProfile as profile">
-            <div class="form-group">
-              <label class="control-label">First Name</label>
-              <input type="text" placeholder="John" ng-model="profile.people.firstname" class="form-control">
-            </div>
-            <div class="form-group">
-              <label class="control-label">Last Name</label>
-              <input type="text" placeholder="Doe" ng-model="profile.people.lastname" class="form-control">
-            </div>
-            <div class="form-group">
-              <label class="control-label">City</label>
-              <input type="text" placeholder="Nashville" ng-model="profile.people.city" class="form-control">
-            </div>
-            <div class="form-group">
-              <label class="control-label">Email</label>
-              <input type="text" placeholder="abc@email.com" ng-model="profile.people.email" class="form-control">
-              <button ng-click="profile.saveAddress()" class="btn">Save</button>
-            </div>
-          </form>
+          <li><a href="/#/people/new">Register</a></li>
+          <li ng-hide="auth"><a href="/#/login">Login</a></li>
+          <li ng-show="auth"><a href="/#/logout">Logout</a></li>
         </ul>
       </nav>
+      <div ng-view class="app"></div>
     </div>
     <script src="lib/build.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/person/new.controller.js"></script>
+    <script src="js/auth/login.controller.js"></script>
+    <script src="js/person/wall.controller.js"></script>
+    <script src="js/person/register.controller.js"></script>
   </body>
 </html>

@@ -1,0 +1,13 @@
+h1 Angular Facebook
+
+	h3.loginBox Login
+	form(class='Login')
+		.form-group
+			label.control-label Email
+			input.form-control(ng-model="auth.email")
+		.form-group
+			label.control-label Password
+			input.form-control(ng-model="auth.password")
+		button.btn.btn-primary(ng-click="auth.login()") Login
+
+

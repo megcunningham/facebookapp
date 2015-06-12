@@ -1,0 +1,39 @@
+
+<div id="modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button data-dismiss="modal" class="close">
+          <h2 class="newProfile">Register</h2>
+        </button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label class="control-label">First Name</label>
+          <input type="text" placeholder="John" ng-model="newProfile.people.firstname" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Last Name</label>
+          <input type="text" placeholder="Doe" ng-model="newProfile.people.lastname" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Email</label>
+          <input type="text" placeholder="abc@email.com" ng-model="newProfile.people.email" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Picture</label>
+          <input type="url" placeholder="http://google.com/img.jpg" ng-model="newProfile.people.photo" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Password</label>
+          <input type="text" placeholder="Dickfarts289" ng-model="newProfile.people.password" class="form-control"/>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button ng-click="newProfile.saveProfile()" class="btn">Save</button>
+    </div>
+  </div>
+</div>
